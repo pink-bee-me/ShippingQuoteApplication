@@ -32,13 +32,13 @@ namespace ShippingQuoteApplication
 
             if (pkgDimSum > 50)
             {
-                Console.WriteLine("Package too big to be shipped via Package Express.");
+                Console.WriteLine("\n\nPackage too big to be shipped via Package Express.");
                 Console.ReadLine();
             }
             else
             {
                 Console.WriteLine("\n\n  Total Cost: ");
-
+            }
                 double pkgQuoteCalc = pkgDimSum * pkgWeight / 100; // used double type because I am dividing the int values by 100 to convert to decimal then to money string to print to console
                 decimal pkgTotal = Convert.ToDecimal(pkgQuoteCalc); // converting to decimal so that I may format my value to a string type money format
                 string shippingCost = String.Format("{0:C}", pkgTotal); // using the "C" (currency format string )
@@ -48,7 +48,7 @@ namespace ShippingQuoteApplication
             }
         }
     }
-}
+
 
 
 
